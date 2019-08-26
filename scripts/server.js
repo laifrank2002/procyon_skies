@@ -275,7 +275,7 @@ setInterval(Celestial_bodies.spawn_asteroid(Sun, 800, 900, 50), 1000);
 
 setImmediate(Universe.update);
 
-var default_port = 3000;
+var default_port = process.env.PORT || 3000;
 module.exports   = function(port) {
     if (isNaN(port)) {
         port = default_port;
